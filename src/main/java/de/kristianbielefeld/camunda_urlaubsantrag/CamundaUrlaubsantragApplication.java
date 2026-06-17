@@ -5,7 +5,11 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-@Deployment(resources = "classpath:hello.bpmn")
+@Deployment(resources = {
+		"classpath:urlaubsantrag.bpmn",
+		"classpath:urlaubsantrag_start.form",
+		"classpath:urlaubsantrag_genehmigen.form"
+})
 public class CamundaUrlaubsantragApplication {
 
 	public static void main(String[] args) {
