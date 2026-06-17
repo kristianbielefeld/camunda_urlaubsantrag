@@ -1,0 +1,51 @@
+{
+  "components": [
+    {
+      "subtype": "date",
+      "dateLabel": "Beginn Urlaub",
+      "type": "datetime",
+      "layout": {
+        "row": "Row_0f7gqbk",
+        "columns": null
+      },
+      "id": "Field_02t66mo",
+      "key": "datetime_xfq16",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "subtype": "date",
+      "dateLabel": "Ende Urlaub",
+      "type": "datetime",
+      "layout": {
+        "row": "Row_1dktn24",
+        "columns": null
+      },
+      "id": "Field_0qgdexg",
+      "key": "datetime_ak08vf",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "Grund (optional)",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_1yr21f1",
+        "columns": null
+      },
+      "id": "Field_1iby9jt",
+      "key": "textfield_kunt1o"
+    }
+  ],
+  "type": "default",
+  "id": "urlaubsantrag_start",
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.9.0",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.47.0"
+  },
+  "schemaVersion": 19
+}

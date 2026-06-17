@@ -1,0 +1,61 @@
+{
+  "components": [
+    {
+      "subtype": "date",
+      "dateLabel": "Beginn Urlaub",
+      "type": "datetime",
+      "layout": {
+        "row": "Row_0ggbca2",
+        "columns": null
+      },
+      "id": "Field_0crhv20",
+      "key": "datetime_940hsc",
+      "readonly": true
+    },
+    {
+      "subtype": "date",
+      "dateLabel": "Ende Urlaub",
+      "type": "datetime",
+      "layout": {
+        "row": "Row_1a0w2rg",
+        "columns": null
+      },
+      "id": "Field_0kiu4tf",
+      "key": "datetime_n00kd",
+      "readonly": true
+    },
+    {
+      "label": "Grund",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_0mineef",
+        "columns": null
+      },
+      "id": "Field_1syrmyj",
+      "key": "textfield_x9qzpv",
+      "readonly": true
+    },
+    {
+      "label": "Genehmigt",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_161efrt",
+        "columns": null
+      },
+      "id": "Field_0ih8200",
+      "key": "checkbox_raj0g",
+      "validate": {
+        "required": true
+      }
+    }
+  ],
+  "type": "default",
+  "id": "urlaubsantrag_genehmigen",
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.9.0",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.47.0"
+  },
+  "schemaVersion": 19
+}

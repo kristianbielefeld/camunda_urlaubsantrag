@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:zeebe="http://camunda.org/schema/zeebe/1.0" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="Definitions_01kbubb" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="5.47.0" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="8.9.0">
+  <bpmn:process id="urlaubsantrag" isExecutable="true">
+    <bpmn:startEvent id="urlaubsantrag_start">
+      <bpmn:extensionElements>
+        <zeebe:formDefinition formId="urlaubsantrag_start" />
+      </bpmn:extensionElements>
+      <bpmn:outgoing>Flow_0e5e7b1</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:userTask id="urlaubsantrag_genehmigen">
+      <bpmn:extensionElements>
+        <zeebe:userTask />
+        <zeebe:assignmentDefinition candidateGroups="manager" />
+        <zeebe:formDefinition formId="urlaubsantrag_genehmigen" />
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_0e5e7b1</bpmn:incoming>
+      <bpmn:outgoing>Flow_05qoo7j</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:sequenceFlow id="Flow_0e5e7b1" sourceRef="urlaubsantrag_start" targetRef="urlaubsantrag_genehmigen" />
+    <bpmn:endEvent id="Event_15zov46">
+      <bpmn:incoming>Flow_05qoo7j</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="Flow_05qoo7j" sourceRef="urlaubsantrag_genehmigen" targetRef="Event_15zov46" />
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="urlaubsantrag">
+      <bpmndi:BPMNShape id="StartEvent_1_di" bpmnElement="urlaubsantrag_start">
+        <dc:Bounds x="182" y="82" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0p049rw_di" bpmnElement="urlaubsantrag_genehmigen">
+        <dc:Bounds x="480" y="60" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_15zov46_di" bpmnElement="Event_15zov46">
+        <dc:Bounds x="802" y="82" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Flow_0e5e7b1_di" bpmnElement="Flow_0e5e7b1">
+        <di:waypoint x="218" y="100" />
+        <di:waypoint x="480" y="100" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_05qoo7j_di" bpmnElement="Flow_05qoo7j">
+        <di:waypoint x="580" y="100" />
+        <di:waypoint x="802" y="100" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>
